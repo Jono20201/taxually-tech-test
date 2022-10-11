@@ -5,17 +5,22 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
+  
   <ItemGroup>
-    <None Remove="README.md" />
+    <InternalsVisibleTo Include="Taxually.TechnicalTest.IntegrationTests"/>
   </ItemGroup>
-
+  
   <ItemGroup>
-    <Content Include="README.md" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Taxually.TechnicalTest.Application\Taxually.TechnicalTest.Application.csproj" />
+    <ProjectReference Include="..\Taxually.TechnicalTest.Contracts\Taxually.TechnicalTest.Contracts.csproj" />
+    <ProjectReference Include="..\Taxually.TechnicalTest.Infrastucture\Taxually.TechnicalTest.Infrastucture.csproj" />
+  </ItemGroup>
+  
+  
 
 </Project>
